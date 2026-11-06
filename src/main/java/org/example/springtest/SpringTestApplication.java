@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import services.INameGeneratorService;
 import services.NameGeneratorService;
 
 @SpringBootApplication(scanBasePackages = {
@@ -14,9 +15,9 @@ import services.NameGeneratorService;
 @RestController
 public class SpringTestApplication {
 
-    private final NameGeneratorService _nameGeneratorService;
+    private final INameGeneratorService _nameGeneratorService;
 
-    public SpringTestApplication(NameGeneratorService nameGeneratorService) {
+    public SpringTestApplication(INameGeneratorService nameGeneratorService) {
         _nameGeneratorService = nameGeneratorService;
     }
 
